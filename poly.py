@@ -207,37 +207,24 @@ def main():
 
     get product of p and q as a new linked list and print product
     """
-
+    n = int(input())
     p = LinkedList()
-    q = LinkedList()
-
-    lines = []
-    for line in sys.stdin:
-        line = line.strip()
-        if line == "":
-            lines.append("")
-        else:
-            lines.append(line)
-
-    i = 0
-    n = int(lines[i])
-    i += 1
     for _ in range(n):
-        coeff, exp = map(int, lines[i].split())
+        line = input()
+        coeff, exp = map(int, line.split())
         p.insert_term(coeff, exp)
-        i += 1
 
-    i += 1
-
-    m = int(lines[i])
-    i += 1
+    input()
+    m = int(input())
+    q = LinkedList()
     for _ in range(m):
-        coeff, exp = map(int, lines[i].split())
+        line = input()
+        coeff, exp = map(int, line.split())
         q.insert_term(coeff, exp)
-        i += 1
 
     print(p.add(q))
     print(p.mult(q))
+
 
 
 
