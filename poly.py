@@ -173,11 +173,11 @@ class LinkedList:
         current_self = self.head
         while current_self:
             current_p = p.head
-        while current_p:
-            result.insert_term(current_self.coeff * current_p.coeff,
-                               current_self.exp + current_p.exp)
-            current_p = current_p.next
-        current_self = current_self.next
+            while current_p:
+                result.insert_term(current_self.coeff * current_p.coeff,
+                                current_self.exp + current_p.exp)
+                current_p = current_p.next
+            current_self = current_self.next
         return result
 
 
@@ -193,7 +193,7 @@ class LinkedList:
         while current:
             result.append(f"({current.coeff}, {current.exp})")
             current = current.next
-        return " -> ".join(result)
+        return " + ".join(result)
 
 
 
