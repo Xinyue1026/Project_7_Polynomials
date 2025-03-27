@@ -14,7 +14,6 @@ Students. Academic penalties up to and including an F in the course are likely.
 
 UT EID: xy4677
 """
-import sys
 
 class Node:
     """
